@@ -4,6 +4,7 @@
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
+
         private Peca[,] _peca;
 
         public Tabuleiro(int linhas, int colunas)
@@ -16,6 +17,12 @@
         public Peca Peca(int linha, int coluna) 
         { 
             return _peca[linha, coluna]; 
+        }
+
+        public void ColocarPeca(Peca peca, Posicao posicao)
+        {
+            _peca[posicao.Linha, posicao.Coluna] = peca;
+            peca.Posicao = posicao;
         }
     }
 }
