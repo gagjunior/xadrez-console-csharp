@@ -8,6 +8,17 @@ namespace xadrez
         {
         }
 
+        private bool PodeMover(Posicao posicao)
+        {
+            Peca peca = Tabuleiro.Peca(posicao);
+            return peca == null || peca.Cor != Cor;
+        }
+
+        public override bool[,] MovimentosPossiveis()
+        {
+            bool[,] matrix = new bool[Tabuleiro.Linhas, Tabuleiro.Colunas];                      
+        }
+
         public override string ToString()
         {
             return "R";
