@@ -33,7 +33,7 @@ namespace xadrez
             }
 
             //Abaixo
-            Posicao.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
+            posicao.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
             while (Tabuleiro.PosicaoEhValida(posicao) && PodeMover(posicao))
             {
                 matrix[posicao.Linha, posicao.Coluna] = true;
@@ -43,6 +43,7 @@ namespace xadrez
                 }
                 posicao.Linha = posicao.Linha + 1;
             }
+
 
             //Direita
             posicao.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
